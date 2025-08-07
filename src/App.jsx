@@ -1,4 +1,4 @@
-import {createBrowserRouter, RouterProvider} from "react-router-dom";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Home } from "./pages/Home";
@@ -14,59 +14,63 @@ import { Addproduct } from "./admin/Addproduct";
 import { LoginPage } from "./components/Loginpage";
 import { Register } from "./components/Register";
 
-const App = ()=>{
+const App = () => {
   const router = createBrowserRouter([
     {
-      path:"/",
-      element:<Home/>
+      path: "/",
+      element: <Home />
     },
     {
-      path:"/shop",
-      element:<Shop/>
+      path: "/shop",
+      element: <Shop />
     },
     {
-      path:"/blog",
-      element:<Blog/>
+      path: "/blog",
+      element: <Blog />
     },
     {
-      path:"/pages",
-      element:<Pages/>
+      path: "/pages",
+      element: <Pages />
     },
     {
-      path:"/elements",
-      element:<Elements/>
+      path: "/elements",
+      element: <Elements />
     },
     {
-      path:"/cart",
-      element:<Cartpage/>
+      path: "/cart",
+      element: <Cartpage />
     },
     {
-      path:"/admin",
-      element:<Admin/>
+      path: "/admin",
+      element: <Admin />
     },
     {
-      path:"/user",
-      element:<User/>
+      path: "/user",
+      element: <User />
     },
     {
-      path:"/order",
-      element:<Order/>
+      path: "/order",
+      element: <Order />
     },
     {
-      path:"/addproduct",
-      element:<Addproduct/>
+      path: "/addproduct",
+      element: <Addproduct />
     },
     {
-      path:"/login",
-      element:<LoginPage/>
+      path: "/login",
+      element: <LoginPage />
     },
     {
-      path:"/register",
-      element:<Register/>
+      path: "/register",
+      element: <Register />
     }
   ]);
+  {
+    basename: "/react-live-app"
+  }
 
-  return <RouterProvider router={router}/>
+
+  return <RouterProvider router={router} />
 }
 
 export default App;
