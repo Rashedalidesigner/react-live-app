@@ -1,4 +1,4 @@
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { BrowserRouter, createBrowserRouter, Route, RouterProvider, Routes } from "react-router-dom";
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Home } from "./pages/Home";
@@ -15,57 +15,22 @@ import { LoginPage } from "./components/Loginpage";
 import { Register } from "./components/Register";
 
 const App = () => {
-  const router = createBrowserRouter([
-    {
-      path: "/",
-      element: <Home />
-    },
-    {
-      path: "/shop",
-      element: <Shop />
-    },
-    {
-      path: "/blog",
-      element: <Blog />
-    },
-    {
-      path: "/pages",
-      element: <Pages />
-    },
-    {
-      path: "/elements",
-      element: <Elements />
-    },
-    {
-      path: "/cart",
-      element: <Cartpage />
-    },
-    {
-      path: "/admin",
-      element: <Admin />
-    },
-    {
-      path: "/user",
-      element: <User />
-    },
-    {
-      path: "/order",
-      element: <Order />
-    },
-    {
-      path: "/addproduct",
-      element: <Addproduct />
-    },
-    {
-      path: "/login",
-      element: <LoginPage />
-    },
-    {
-      path: "/register",
-      element: <Register />
-    }
-  ]);
-  return <RouterProvider basename="/react-live-app" router={router} />
+  <BrowserRouter basename="/react-live-app">
+    <Routes>
+      <Route path="/" element={<Home/>} />
+      <Route path="/shop" element={<Shop />} />
+      <Route path="/blog" element={<Blog />} />
+      <Route path="/pages" element={<Pages />} />
+      <Route path="/elements" element={<Elements />} />
+      <Route path="/cart" element={<Cartpage />} />
+      <Route path="/admin" element={<Admin />} />
+      <Route path="/user" element={<User />} />
+      <Route path="/order" element={<Order />} />
+      <Route path="/addproduct" element={<Addproduct />} />
+      <Route path="/login" element={<LoginPage />} />
+      <Route path="/register" element={<Register />} />
+    </Routes>
+  </BrowserRouter>
 }
 
 export default App;
