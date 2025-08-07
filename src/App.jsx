@@ -1,4 +1,4 @@
-import { BrowserRouter, createBrowserRouter, Route, RouterProvider, Routes } from "react-router-dom";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Home } from "./pages/Home";
@@ -15,22 +15,24 @@ import { LoginPage } from "./components/Loginpage";
 import { Register } from "./components/Register";
 
 const App = () => {
-  <BrowserRouter basename="/react-live-app">
-    <Routes>
-      <Route path="/" element={<Home/>} />
-      <Route path="/shop" element={<Shop />} />
-      <Route path="/blog" element={<Blog />} />
-      <Route path="/pages" element={<Pages />} />
-      <Route path="/elements" element={<Elements />} />
-      <Route path="/cart" element={<Cartpage />} />
-      <Route path="/admin" element={<Admin />} />
-      <Route path="/user" element={<User />} />
-      <Route path="/order" element={<Order />} />
-      <Route path="/addproduct" element={<Addproduct />} />
-      <Route path="/login" element={<LoginPage />} />
-      <Route path="/register" element={<Register />} />
-    </Routes>
-  </BrowserRouter>
+  return <>
+    <BrowserRouter basename="/react-live-app">
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/shop" element={<Shop />} />
+        <Route path="/blog" element={<Blog />} />
+        <Route path="/pages" element={<Pages />} />
+        <Route path="/elements" element={<Elements />} />
+        <Route path="/cart" element={<Cartpage />} />
+        <Route path="/admin" element={<Admin />} />
+        <Route path="/user" element={<User />} />
+        <Route path="/order" element={<Order />} />
+        <Route path="/addproduct" element={<Addproduct />} />
+        <Route path="/login" element={<LoginPage />} />
+        <Route path="/register" element={<Register />} />
+      </Routes>
+    </BrowserRouter>
+  </>
 }
 
 export default App;
