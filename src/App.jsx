@@ -65,12 +65,7 @@ const App = () => {
       element: <Register />
     }
   ]);
-  {
-    basename: "/react-live-app"
-  }
-
-
-  return <RouterProvider router={router} />
+  return <RouterProvider basename="/react-live-app" router={router} />
 }
 
 export default App;
