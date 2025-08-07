@@ -1,0 +1,20 @@
+.admin-navbar{
+    display: flex;
+    width: 70%;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.admin-navbar li a:hover::after{
+    width: 100%;
+    height: 4px;
+    background-color: rgb(113, 178, 23);
+}
+
+.admin-navbar li a{
+    text-decoration: none;
+}
+
+.admin-navbar li{
+    list-style: none;
+}

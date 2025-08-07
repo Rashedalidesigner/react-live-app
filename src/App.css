@@ -1,0 +1,28 @@
+.card-button{
+    display: flex;
+    width: 120px;
+    height: 40px;
+    background-color: rgb(113, 178, 23);
+    font-size: 14px;
+}
+
+.card-text{
+    margin-bottom: 0;
+}
+
+.card-icons{
+    font-size: 28px;
+}
+
+.header-text{
+    font-size: 14px;
+}
+
+.colors-taka{
+    color: rgb(113, 178, 23);
+}
+
+.addtocartimage{
+    width: 60px;
+    height: 60px;
+}

@@ -1,0 +1,123 @@
+.card-imges-css{
+    width: 250px;
+    height: 250px;
+}
+
+.section-3-card-text div{
+    width: 100%;
+    height: 20px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: wrap;
+}
+
+.card-text-hover{
+    width: 100%;
+    height: 80px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: wrap;
+}
+
+.Table-components{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.cart-page{
+    width: 100%;
+    height: 30vh;
+    background-image: url("https://woodmart.xtemos.com/wp-content/uploads/2022/03/page-title-shop.jpg");
+}
+
+.cart-total-box{
+    display: flex;
+    width: 50%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid rgb(168, 168, 168);
+}
+
+.cart-total-subtotal{
+    display: flex;
+    width: 500px;
+    justify-content: space-between;
+    margin-top: 1rem;
+}
+
+.cart-total-shapping{
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    justify-content: space-between;
+    /* border: 2px solid black; */
+}
+
+.cart-total-shapping-box label{
+    margin-right: 10px;
+}
+
+.cart-ceckout{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: end;
+    margin-top: 5rem;
+}
+
+.checkoutbtn{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: end;
+    margin-right: 10rem;
+    margin-top: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.checkoutbtn button{
+    width: 100px;
+    height: 40px;
+    border-radius: 5px;
+    background-color: rgb(113, 178, 23);
+    color: #000;
+}
+
+.cart-delete-button{
+    display: flex;
+    width: 100px;
+    height: 50px;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(113, 178, 23);
+    border-radius: 5px;
+    border: none;
+}
+
+.incrizedecrizebutton{
+    display: flex;
+    margin: 1rem 0;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    background-color: rgb(113, 178, 23);
+    border: none;
+    border-radius: 5px;
+}
+
+.button-box-incrizedecrize{
+    height: auto;
+    display: flex;
+}
+
+.button-box-incrizedecrize span{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+}

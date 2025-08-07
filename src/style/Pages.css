@@ -1,0 +1,93 @@
+.pages-section-1 {
+    display: flex;
+    width: 100%;
+    height: 30vh;
+    align-items: center;
+    justify-content: center;
+    background-image: url("https://woodmart.xtemos.com/wp-content/uploads/2021/04/portfolio-title-bg-opt.jpg");
+}
+
+.pages-section-1 h1{
+    font-size: 4rem;
+    font-weight: 700;
+    color: #fff;
+    text-align: center;
+}
+
+/* .pages-section-hidden{
+    display: none;
+} */
+
+.pages-section-nav{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 60px;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+}
+
+.pages-section-nav-box{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.pages-section-nav-box div{
+    margin: 0 0.5rem;
+    cursor: pointer;
+}
+
+
+.pages-section-2{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    min-height: 60vh;
+    align-items: center;
+    justify-content: center;
+    padding: 0 9rem;
+}
+
+.pages-section-wrapper{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #000;
+}
+
+.pages-section-box{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    padding: 0 9rem;
+    align-items: center;
+    justify-content: center;
+    /* border: 2px solid #000; */
+    margin: 1rem;
+}
+
+.pages-section-card{
+    display: flex;
+    flex-direction: column;
+    width: 380px;
+    background-color: #fff;
+    border-radius: 10px;
+}
+
+.pages-section-box img{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 380px;
+    align-items: center;
+    justify-content: center;
+}
