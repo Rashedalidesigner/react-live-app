@@ -39,7 +39,7 @@ export const CheckOut = () => {
             },
             body: JSON.stringify(orderdata)
         })
-        if (orderpost.status == 200) {
+        if (orderpost.ok) {
             alert("Order Placed Successfully");
             setCheckoutdata({
                 name: "",
