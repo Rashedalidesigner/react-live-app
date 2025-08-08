@@ -7,14 +7,14 @@ import { Blog } from "./pages/Blog";
 import { Pages } from "./pages/Pages";
 import { Elements } from "./pages/Elements";
 import { Cartpage } from "./pages/Cartpage";
-import { Admin } from "./admin/Admin";
-import { User } from "./admin/User";
-import { Order } from "./admin/Order";
-import { Addproduct } from "./admin/Addproduct";
 import { LoginPage } from "./components/Loginpage";
 import { Register } from "./components/Register";
 import { WishListpage } from "./pages/WishLIstpage";
 import { CheckOut } from "./components/CheckOut";
+import { Admin } from "./components/Admin";
+import { User } from "./components/User";
+import { Order } from "./components/Order";
+import { Addproduct } from "./components/Addproduct";
 
 const App = () => {
   return <>
