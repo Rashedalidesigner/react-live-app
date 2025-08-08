@@ -1,43 +1,64 @@
 
+import { useNavigate } from "react-router-dom"
 import { UseMainStore } from "../Store/MainStore"
 import { Footer } from "./Footer"
 import { Header2 } from "./Header2"
 import { useState } from "react"
 
 export const CheckOut = () => {
-    const {orderpagedata,createOrdercode,createDate} = UseMainStore();
-    console.log(orderpagedata,"checkoutpage")
+    const navigator = useNavigate();
+    const { orderpagedata, createOrdercode, createDate } = UseMainStore();
+    console.log(orderpagedata, "checkoutpage")
     const [checkoutdata, setCheckoutdata] = useState({
         name: "",
         address: "",
         email: "",
         phone: ""
     });
-    const genarateorder = ()=>{
+    const genarateorder = () => {
         const orderdetiless = {
-            ordercode:createOrdercode(),
-            name:checkoutdata.name,
-            address:checkoutdata.address,
+            ordercode: createOrdercode(),
+            name: checkoutdata.name,
+            address: checkoutdata.address,
             phone: checkoutdata.phone,
             email: checkoutdata.email,
-            date:createDate(),
-            total:orderpagedata[0].total||0,
-            paymentmethod:orderpagedata[0].shapping[0],
-            orderdetile :orderpagedata[0].product[0]
+            date: createDate(),
+            total: orderpagedata[0].total || 0,
+            paymentmethod: orderpagedata[0].shapping[0],
+            orderdetile: orderpagedata[0].product[0]
         }
         return orderdetiless;
     }
-    const handlesubmitcheckout = async(e) => {
+    const handlesubmitcheckout = async (e) => {
         e.preventDefault();
         const orderdata = genarateorder();
-        const orderpost =await fetch("http://localhost:5000/admin/order",{
-            method:"POST",
-            headers:{
-                "Content-Type":"application/json"
+        const orderpost = await fetch("http://localhost:5000/admin/order", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
             },
-            body:JSON.stringify(orderdata)
+            body: JSON.stringify(orderdata)
         })
-        console.log(orderpost);
+        if (orderpost.status == 200) {
+            alert("Order Placed Successfully");
+            setCheckoutdata({
+                name: "",
+                address: "",
+                email: "",
+                phone: ""
+            });
+            navigator("/")
+        }else{
+            alert("Order Placed Failed");
+            setCheckoutdata({
+                name: "",
+                address: "",
+                email: "",
+                phone: ""
+            });
+            navigator("/")
+        }
+
     }
     const handlecheckoutchanges = (e) => {
         const name = e.target.name;
@@ -74,7 +95,7 @@ export const CheckOut = () => {
                             <input name="phone" value={checkoutdata.phone} type="number" onChange={handlecheckoutchanges} className="form-control" />
                         </div>
                         <div className="mb-3">
-                            <label className="form-label">Total :{orderpagedata[0]?.total||0}</label>
+                            <label className="form-label">Total :{orderpagedata[0]?.total || 0}</label>
                         </div>
                         <div className="mb-3">
                             <label className="form-label">Payment Method :{orderpagedata[0]?.shapping?.[0] || "na"}</label>
