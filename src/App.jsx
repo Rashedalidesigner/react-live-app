@@ -13,6 +13,8 @@ import { Order } from "./admin/Order";
 import { Addproduct } from "./admin/Addproduct";
 import { LoginPage } from "./components/Loginpage";
 import { Register } from "./components/Register";
+import { WishListpage } from "./pages/WishLIstpage";
+import { CheckOut } from "./components/CheckOut";
 
 const App = () => {
   return <>
@@ -24,12 +26,14 @@ const App = () => {
         <Route path="/pages" element={<Pages />} />
         <Route path="/elements" element={<Elements />} />
         <Route path="/cart" element={<Cartpage />} />
+        <Route path="/checkout" element={<CheckOut />} />
         <Route path="/admin" element={<Admin />} />
         <Route path="/user" element={<User />} />
         <Route path="/order" element={<Order />} />
         <Route path="/addproduct" element={<Addproduct />} />
         <Route path="/login" element={<LoginPage />} />
         <Route path="/register" element={<Register />} />
+        <Route path="/wishlist" element={<WishListpage/>}/>
       </Routes>
     </BrowserRouter>
   </>

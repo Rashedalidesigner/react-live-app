@@ -23,6 +23,11 @@ const MainReducer = (state, action) => {
           ...state,
           addtocart: [...state.addtocart, action.payload],
         }
+      case "EMTY_ADDTO_CART":
+        return{
+          ...state,
+          addtocart:[]
+        }
       case "productquentityincrize":
         return {
           ...state,
@@ -33,6 +38,11 @@ const MainReducer = (state, action) => {
           ...state
         }
       }
+      case "SET_ORDER_PAGE_DATA":
+        return {
+          ...state,
+          orderpagedata:[...state.orderpagedata,action.payload]
+        }
       case "DELETE_PRODUCT_ADDTOCARD": {
         const product = action.payload;
         console.log("delete",product)
@@ -51,10 +61,18 @@ const MainReducer = (state, action) => {
         }
       }
       case "SUBTOTAL_PRODUCT_PRICE":
-        console.log("tot",action.payload)
-        console.log(state.addtocart)
         return{
           ...state, 
+        }
+      case "ADD_WISHLIST_ARRAY":
+        return {
+          ...state,
+          wishlist:[...state.wishlist, action.payload]
+        }
+      case "ORDER_SHOW_ARRAY":
+        return {
+          ...state,
+          ordercode:[...state.ordercode, action.payload]
         }
     default:
       return state;

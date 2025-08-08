@@ -1,19 +1,31 @@
 import { useState } from "react";
 import { UseMainStore } from "../Store/MainStore";
 import "../style/Shop.css"
+import { useNavigate } from "react-router-dom";
 
 
 
 export const AddtoCartTable = () => {
-    const { addtocart, incrizeQuentity, decrizeQuentity, handledeleteproduct } = UseMainStore();
-    const [shapping, setShapping] = useState([""]);
+    const navigate = useNavigate();
+    const { addtocart, incrizeQuentity,orderpagedataset, decrizeQuentity,emtyaddtocart, handledeleteproduct } = UseMainStore();
+    const [shapping, setShapping] = useState(["Flat rate"]);
     "Flat rate", "Free shipping", "Local Pickup"
     let Total = 0;
 
     // Calculate subtotal for each item and total subtotal
     const subtotals = addtocart.map(item => item.Price * item.quentity);
     const totalSubtotal = subtotals.reduce((acc, curr) => acc + curr, 0);
-
+    const handleplaceorder = () =>{
+        const orderdata = {
+            product:[addtocart],
+            total:totalSubtotal,
+            shapping:shapping
+        }
+        orderpagedataset(orderdata);
+        navigate("/checkout")
+        emtyaddtocart();
+        
+    }
     const handeleclickshapping = (e) => {
         let value = e.target.value;
         switch (value) {
@@ -114,7 +126,7 @@ export const AddtoCartTable = () => {
                             <div><b>{Total}</b></div>
                         </div>
                         <div className="checkoutbtn">
-                            <button>Checkout</button>
+                            <button onClick={handleplaceorder}>Order</button>
                         </div>
                     </div>
 

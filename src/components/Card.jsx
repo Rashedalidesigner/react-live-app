@@ -6,8 +6,7 @@ import { IoMdSearch } from "react-icons/io";
 import { useEffect } from "react";
 
 export const Card = () => {
-  const {searchData,search, searchDataload,handleclickorder } = UseMainStore();
-  console.log("sera",searchDataload);
+  const {searchData,search, searchDataload,handlewishlistclick,handleclickorder } = UseMainStore();
   useEffect(()=>{
     searchData();
   },[search]);
@@ -16,7 +15,6 @@ export const Card = () => {
       <div className="row">
         {
           searchDataload.map((item, index) => {
-            console.log(item);
             return <div key={index} className="col-lg-3 " >
               <div className="section-3-card">
                 <div>
@@ -34,7 +32,7 @@ export const Card = () => {
                     <p>{item.description}</p>
                   </div>
                   <div className="section-3-card-footer">
-                    <div><CiHeart /></div>
+                    <div onClick={()=>handlewishlistclick(item)}><CiHeart /></div>
                     <div className="section-3-card-btn" onClick={() => handleclickorder(item)}>ADD TO CART</div>
                     <div><IoMdSearch /></div>
                   </div>

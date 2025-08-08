@@ -32,7 +32,7 @@ export const Header2 = () => {
                 </div>
                 <div className="header-icons">
                     <span className="login-register"><Link to="/login">LOGIN</Link>/<Link to="/register">REGISTER</Link></span>
-                    <span><FaRegHeart /></span>
+                    <NavLink to="/wishlist"><span><FaRegHeart /></span></NavLink>
                     <span><TiArrowShuffle /></span>
                     <span><Link to="/cart"><AiOutlineShopping /></Link></span>
                 </div>
