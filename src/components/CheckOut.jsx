@@ -74,10 +74,10 @@ export const CheckOut = () => {
                             <input name="phone" value={checkoutdata.phone} type="number" onChange={handlecheckoutchanges} className="form-control" />
                         </div>
                         <div className="mb-3">
-                            <label className="form-label">Total :{orderpagedata[0].total}</label>
+                            <label className="form-label">Total :{orderpagedata[0]?.total||0}</label>
                         </div>
                         <div className="mb-3">
-                            <label className="form-label">Payment Method :{orderpagedata[0].shapping[0]}</label>
+                            <label className="form-label">Payment Method :{orderpagedata[0]?.shapping?.[0] || "na"}</label>
                         </div>
                         <button type="submit" className="btn btn-primary">Submit</button>
                     </form>
