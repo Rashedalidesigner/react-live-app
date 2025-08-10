@@ -27,7 +27,7 @@ export const Register = () => {
         e.preventDefault();
         console.log(register)
         try {
-            const response = await fetch("http://localhost:5000/admin/register", {
+            const response = await fetch("http://localhost:5173/react-live-app/admin/register", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"

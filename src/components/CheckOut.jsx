@@ -32,7 +32,7 @@ export const CheckOut = () => {
     const handlesubmitcheckout = async (e) => {
         e.preventDefault();
         const orderdata = genarateorder();
-        const orderpost = await fetch("http://localhost:5000/admin/order", {
+        const orderpost = await fetch("http://localhost:5173/react-live-app/admin/order", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
