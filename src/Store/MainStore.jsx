@@ -50,11 +50,11 @@ const MainStoreProvider = ({ children }) => {
     }
 
     const orderDetile = async()=>{
-        const order = await axios.get("http://localhost:5000/admin/showorder");
+        const order = await axios.get("https://react-live-app-server.onrender.com/admin/showorder");
         setOrderStore(order);
     }
     const Showuser = async()=>{
-        const user = await axios.get("http://localhost:5000/admin/user");
+        const user = await axios.get("https://react-live-app-server.onrender.com/admin/user");
         setUser(user);
     }
 
@@ -79,7 +79,7 @@ const MainStoreProvider = ({ children }) => {
 
     const GetData = async () => {
         try {
-            const getdata = await axios.get("http://localhost:5000/admin/product");
+            const getdata = await axios.get("https://react-live-app-server.onrender.com/admin/product");
             console.log("getdata", getdata.data);
             dispatch({ type: "GET_DATA", payload: getdata });
         } catch (error) {
